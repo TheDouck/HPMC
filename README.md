@@ -15,7 +15,7 @@ The package manager is written in Rust and designed to download and install pack
 You can build the package manager using the `cargo` tool.
 
 ```
-Cargo Build
+cargo build
 ```
 ---
 ## :rocket: Usage
