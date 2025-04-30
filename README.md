@@ -1,7 +1,7 @@
-# **HMPC**
+# **HPMC**
 
 >[!IMPORTANT]
->HMPC is currently a prototype to show the ability for Hexium to download files from the internet.
+>HPMC is currently a prototype to show the ability for Hexium to download files from the internet.
 
 ---
 Welcome to **HPMC (Hexium Package Managing Client)**, a package manager that is designed to work with the Hexium Operating System.

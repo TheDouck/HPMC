@@ -1,4 +1,4 @@
-// Project: HMPC
+// Project: HPMC
 // File: main.rs
 use lazy_static::lazy_static;
 use spin::Mutex;
@@ -26,7 +26,7 @@ fn main() {
 }
 
 pub fn print_prompt() {
-    print!("HMPC> ");
+    print!("HPMC> ");
     io::stdout().flush().expect("Failed to flush stdout");
 }
 
@@ -83,5 +83,6 @@ fn download(link: &str, package: &str) {
     let mut resp = reqwest::blocking::get(link).expect("request failed");
     let mut out = File::create(package).expect("failed to create file");
     io::copy(&mut resp, &mut out).expect("failed to copy content");
+    print_prompt();
     */
 }
