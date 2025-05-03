@@ -77,12 +77,9 @@ pub fn key_handle(c: char) {
 
 fn download(link: &str, package: &str) {
     println!("Downloading from: {}", link);
-    println!("Saving as: {}", package);
-    // Uncomment the following lines to enable actual downloading
-    /*
     let mut resp = reqwest::blocking::get(link).expect("request failed");
+    println!("Saving as: {}", package);
     let mut out = File::create(package).expect("failed to create file");
     io::copy(&mut resp, &mut out).expect("failed to copy content");
     print_prompt();
-    */
 }
