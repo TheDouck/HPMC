@@ -40,18 +40,18 @@ pub fn key_handle(c: char) {
                 println!("Entering install mode");
                 let mut link = String::new();
                 let mut package = String::new();
-                print!("Enter the link to the package: ");
+                print!("Enter the repository owner and name in this format <owner>/<repo>: ");
                 io::stdout().flush().expect("Failed to flush stdout");
                 io::stdin()
                     .read_line(&mut link)
                     .expect("Failed to read line");
-                print!("Enter the package name: ");
+                print!("Enter the name of the downloaded file: ");
                 io::stdout().flush().expect("Failed to flush stdout");
                 io::stdin()
                     .read_line(&mut package)
                     .expect("Failed to read line");
                 download(link.trim(), package.trim());
-                println!("Package downloaded successfully");
+                println!("File downloaded successfully");
             }
             _ => {
                 println!("Unknown command: {}", stdin.as_str().trim());
@@ -76,8 +76,9 @@ pub fn key_handle(c: char) {
 }
 
 fn download(link: &str, package: &str) {
-    println!("Downloading from: {}", link);
-    let mut resp = reqwest::blocking::get(link).expect("request failed");
+    let url = format!("https://github.com/{}/archive/refs/heads/main.zip", link);
+    println!("Downloading from: {}", url);
+    let mut resp = reqwest::blocking::get(&url).expect("request failed");
     println!("Saving as: {}", package);
     let mut out = File::create(package).expect("failed to create file");
     io::copy(&mut resp, &mut out).expect("failed to copy content");
