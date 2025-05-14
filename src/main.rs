@@ -39,16 +39,11 @@ pub fn key_handle(c: char) {
             "install" => {
                 println!("Entering install mode");
                 let mut link = String::new();
-                let mut package = String::new();
+                let package = "main.zip".to_string();
                 print!("Enter the repository owner and name in this format <owner>/<repo>: ");
                 io::stdout().flush().expect("Failed to flush stdout");
                 io::stdin()
                     .read_line(&mut link)
-                    .expect("Failed to read line");
-                print!("Enter the name of the downloaded file: ");
-                io::stdout().flush().expect("Failed to flush stdout");
-                io::stdin()
-                    .read_line(&mut package)
                     .expect("Failed to read line");
                 download(link.trim(), package.trim());
                 println!("File downloaded successfully");
