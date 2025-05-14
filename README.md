@@ -21,10 +21,14 @@ cargo build
 ## :rocket: Usage
 #### Download of packages
 ```
-hpmc install <catogory>/<package>
+hpmcinstall <catogory>/<package>
 ```
-#### Removal of packages
+When inside **HPMC**
 ```
-hpmc remove <catogory>/<package>
+install
+```
+When inside the **install** function
+```
+<owner>/<repo>
 ```
 ---
