@@ -21,7 +21,7 @@ cargo build
 ## :rocket: Usage
 #### Download of packages
 ```
-hpmcinstall <catogory>/<package>
+HPMC
 ```
 When inside **HPMC**
 ```
