@@ -25,10 +25,6 @@ HPMC
 ```
 When inside **HPMC**
 ```
-install
-```
-When inside the **install** function
-```
-<owner>/<repo>
+install <package>
 ```
 ---
