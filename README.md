@@ -6,7 +6,7 @@
 ---
 Welcome to **HPMC (Hexium Package Managing Client)**, a package manager that is designed to work with the Hexium Operating System.
 
-The package manager is written in Rust and designed to download and install packages from different sources. It uses a package name system that looks like the **emerge** package manager.
+The package manager is written in Rust and designed to download and install packages from different sources.
 
 >[!IMPORTANT] 
 >We currently don't have a way to download and install non pre-compiled software.
