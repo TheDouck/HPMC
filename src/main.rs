@@ -45,7 +45,7 @@ fn main() {
 }
 
 // Update key_handle to accept packages
-pub fn key_handle(c: char, packages: &Vec<Package>) {
+fn key_handle(c: char, packages: &Vec<Package>) {
     let mut stdin = STDIN.lock();
     if c == '\n' {
         print!("\n");
@@ -66,6 +66,24 @@ pub fn key_handle(c: char, packages: &Vec<Package>) {
             } else {
                 println!("Usage: install <package_name>");
             }
+        } else if input == "exit" || input == "quit" {
+            println!("Exiting HPMC...");
+            std::process::exit(0);
+        } else if input == "help" {
+            println!("Available commands:");
+            println!("  install <package_name> - Install a package");
+            println!("  exit or quit - Exit the program");
+            println!("  help - Show this help message");
+        } else if input == "list" {
+            for package in packages {
+                println!("{}: {}", package.name, package.link);
+            }
+        } else if input == "clear" {
+            print!("\x1B[2J\x1B[1;1H"); // Clear the terminal
+        } else if input == "version" {
+            println!("HPMC version 0.1.0");
+        } else if input == "about" {
+            println!("HPMC is a simple package manager for Rust.");
         } else {
             println!("Unknown command: {}", input);
         }

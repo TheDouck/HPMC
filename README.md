@@ -19,16 +19,32 @@ cargo build
 ```
 ---
 ## :rocket: Usage
-#### Download of packages
 ```
 HPMC
 ```
-When inside **HPMC**
+### When inside **HPMC**
+#### Download of packages
 ```
-install
+install <package>
 ```
-When inside the **install** function
+#### Exiting
 ```
-<owner>/<repo>
+exit / quit
+```
+#### List available packages for download
+```
+list
+```
+#### Clear screen
+```
+clear
+```
+#### Help
+```
+help
+```
+#### About
+```
+about
 ```
 ---
