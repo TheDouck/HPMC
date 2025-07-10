@@ -3,6 +3,13 @@
 >[!IMPORTANT]
 >HPMC is currently a prototype to show the ability for Hexium to download files from the internet.
 
+>[!WARNING]
+>**HPMC DOES NOT WORK.**
+>
+>The current implementation does **not** properly select mirrors by priority, does **not** parse direct URLs from the mirrorlist, and may not handle downloads correctly. Many features are incomplete or missing.  
+>
+>Use this code for demonstration or development purposes only.
+
 ---
 Welcome to **HPMC (Hexium Package Managing Client)**, a package manager that is designed to work with the Hexium Operating System.
 
@@ -31,10 +38,6 @@ install <package>
 ```
 exit / quit
 ```
-#### List available packages for download
-```
-list
-```
 #### Clear screen
 ```
 clear
@@ -47,4 +50,3 @@ help
 ```
 about
 ```
----
